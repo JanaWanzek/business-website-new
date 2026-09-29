@@ -113,13 +113,13 @@
 }
 
 .about-perspective__title {
-  max-width: 1150px;
+  max-width: 1050px;
   margin: 0 0 34px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(44px, 4.5vw, 68px);
+  font-size: clamp(42px, 4vw, 58px);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.08;
 
   color: #FA5039;
 }
@@ -144,25 +144,35 @@
 .about-values {
   width: 100%;
   background: #E9A2B2;
-  padding: 75px 0 90px;
+  padding: 75px 24px 90px;
+  box-sizing: border-box;
 }
 
-.about-values__heading {
-  text-align: center;
-  margin-bottom: 55px;
 
+/* =========================
+   ABSCHNITTSKOPF
+   ========================= */
+
+.about-values__heading {
+  text-align: left;
+  margin-bottom: 25px;
 }
 
 .about-values__title {
   margin: 0;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(40px, 4vw, 58px);
+  font-size: clamp(36px, 3.5vw, 50px);
   font-weight: 700;
   line-height: 1.05;
 
   color: #F9F1E6;
 }
+
+
+/* =========================
+   WERTE-GRID
+   ========================= */
 
 .about-values__grid {
   display: grid;
@@ -170,35 +180,68 @@
   gap: 0;
 }
 
+
+/* =========================
+   EINZELNER WERT
+   ========================= */
+
 .about-value {
   padding: 12px 42px 18px;
+  box-sizing: border-box;
 }
 
-.about-value + .about-value {
-  border-left: 1px solid #F9F1E6;
+/* erste Spalte bündig mit Überschrift */
+.about-value:first-child {
+  padding-left: 0;
 }
+
+/* letzte Spalte nicht unnötig weit nach innen */
+.about-value:last-child {
+  padding-right: 0;
+}
+
+/* Trennlinien zwischen den Spalten */
+.about-value + .about-value {
+  border-left: 1px solid rgba(249, 241, 230, 0.85);
+}
+
+
+/* =========================
+   NUMMER
+   ========================= */
 
 .about-value__number {
   display: block;
   margin-bottom: 20px;
 
-  font-family: 'Forma DJR', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
 
   color: #F9F1E6;
 }
+
+
+/* =========================
+   WERT-TITEL
+   ========================= */
 
 .about-value h3 {
   margin: 0 0 14px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 1.1;
 
   color: #FA5039;
 }
+
+
+/* =========================
+   BESCHREIBUNG
+   ========================= */
 
 .about-value p {
   margin: 0;
@@ -212,6 +255,65 @@
 }
 
 
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+
+  .about-values {
+    padding: 65px 20px 75px;
+  }
+
+  .about-values__heading {
+    margin-bottom: 42px;
+  }
+
+  .about-values__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-value,
+  .about-value:first-child,
+  .about-value:last-child {
+    padding: 26px 0;
+  }
+
+  .about-value + .about-value {
+    border-left: 0;
+    border-top: 1px solid rgba(249, 241, 230, 0.85);
+  }
+
+  .about-value__number {
+    margin-bottom: 14px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 550px) {
+
+  .about-values {
+    padding: 55px 20px 65px;
+  }
+
+  .about-values__title {
+    font-size: 36px;
+  }
+
+  .about-value h3 {
+    font-size: 27px;
+  }
+
+  .about-value p {
+    font-size: 16px;
+  }
+}
+
+
 /* =========================================
    QUALIFIKATIONEN
 ========================================= */
@@ -222,67 +324,91 @@
   padding: 80px 0 95px;
 }
 
-.about-qualifications__heading {
-  text-align: center;
-  margin-bottom: 50px;
-
+.about-qualifications .section-label {
   color: #FA5039;
+}
+
+.about-qualifications__heading {
+  text-align: left;
+  margin-bottom: 50px;
 }
 
 .about-qualifications__title {
   margin: 0;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(40px, 4vw, 58px);
+  font-size: clamp(36px, 3.5vw, 50px);
   font-weight: 700;
   line-height: 1.05;
 
   color: #FA5039;
 }
 
+
+/* =========================================
+   ZWEI SPALTEN
+========================================= */
+
 .about-qualifications__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 0;
+  align-items: stretch;
 }
 
-.about-qualification-card {
-  padding: 34px 36px;
-
-  background: #EFADB7;
-
-  border-radius: 6px;
+.about-qualifications__column {
+  padding-right: 55px;
 }
 
-.about-qualification-card--pink {
-  background: #ADB5A7;
+.about-qualifications__column--right {
+  padding-right: 0;
+  padding-left: 55px;
+
+  border-left: 1px solid #ADB5A7;
 }
 
-.about-qualification-card h3 {
-  margin: 0 0 20px;
+
+/* =========================================
+   SPALTENÜBERSCHRIFTEN
+========================================= */
+
+.about-qualifications__column h3 {
+  margin: 0 0 28px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
+  line-height: 1.1;
 
-  color: #F9F1E6;
+  color: #FA5039;
 }
 
-.about-qualification-card ul {
-  margin: 0;
-  padding-left: 22px;
+
+/* =========================================
+   EINTRÄGE
+========================================= */
+
+.about-qualification__list {
+  width: 100%;
 }
 
-.about-qualification-card li {
-  margin-bottom: 10px;
+.about-qualification__item {
+  padding: 15px 0;
+
+  border-top: 1px solid rgba(174, 187, 170, 0.8);
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
 
-  color: #F9F1E6;
+  color: #1A1A1A;
 }
 
+.about-qualification__item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
 
 /* =========================================
    MOBILE

@@ -14,8 +14,8 @@
     </h1>
 
     <p class="contact-hero__intro">
-      Du interessiert dich für einen Workshop, ein Coaching, möchtest ein individuelles
-      Format entwickeln oder hast eine andere Anfrage? Schreibe mir gerne.
+      Du interessierst dich für einen Workshop, ein Coaching, möchtest ein individuelles
+      Format entwickeln oder hast eine andere Anfrage? Schreib mir gerne.
       In einem ersten Gespräch klären wir, worum es geht und ob eine Zusammenarbeit passt.
     </p>
 
@@ -41,21 +41,28 @@
         Schreib mir.
       </h2>
 
-      <form class="contact-form">
+      <form class="contact-form"
+      (ngSubmit)="onSubmit()"
+      #contactForm="ngForm"
+>
 
         <div class="contact-form__row">
+
           <div class="contact-field">
             <label for="name">Name</label>
+
             <input
               type="text"
               id="name"
               name="name"
               placeholder="Dein Name"
+              required
             >
           </div>
 
           <div class="contact-field">
             <label for="organisation">Organisation</label>
+
             <input
               type="text"
               id="organisation"
@@ -63,16 +70,19 @@
               placeholder="Organisation"
             >
           </div>
+
         </div>
 
 
         <div class="contact-field">
           <label for="email">E-Mail</label>
+
           <input
             type="email"
             id="email"
             name="email"
             placeholder="name@organisation.de"
+            required
           >
         </div>
 
@@ -80,7 +90,7 @@
         <div class="contact-field">
           <label for="topic">Worum geht es?</label>
 
-          <select id="topic" name="topic">
+          <select id="topic" name="topic" required>
             <option value="">Bitte auswählen</option>
             <option value="workshop">Standardisierter Workshop</option>
             <option value="individuell">Individuelles Format</option>
@@ -98,6 +108,7 @@
             name="message"
             rows="7"
             placeholder="Worum geht es in Deiner Anfrage?"
+            required
           ></textarea>
         </div>
 
@@ -111,10 +122,11 @@
     </div>
 
 
-    <!-- DIREKTER KONTAKT -->
+    <!-- DIREKTER KONTAKT + CALENDLY -->
     <aside class="contact-info">
 
       <div class="contact-info__block">
+
         <p class="contact-info__label">
           DIREKTER KONTAKT
         </p>
@@ -134,19 +146,36 @@
             0176 32912002
           </a>
         </p>
+
       </div>
 
 
-      <div class="contact-info__block contact-info__block--secondary">
+      <div class="contact-info__block contact-info__block--booking">
 
         <p class="contact-info__label">
-          WAS PASSIERT DANACH?
+          DIREKT EINEN TERMIN BUCHEN
         </p>
 
+        <h3>
+          Lieber direkt sprechen?
+        </h3>
+
         <p>
-          Ich melde mich in der Regel innerhalb von 2–3 Werktagen zurück.
-          Bei Workshop- und Coachinganfragen vereinbaren wir anschließend ein unverbindliches
-          Vorgespräch, in dem wir Anliegen, Zielgruppe und Rahmenbedingungen besprechen.
+          Buche Dir direkt ein unverbindliches 15-minütiges
+          Kennenlerngespräch.
+        </p>
+
+        <a
+          href="https://calendly.com/coaching-adyn/kennlern-gesprach"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-info__booking-button"
+        >
+          Termin direkt buchen →
+        </a>
+
+        <p class="contact-info__booking-note">
+          15 Minuten · unverbindlich · online
         </p>
 
       </div>
@@ -175,39 +204,59 @@
     <div class="contact-process__grid">
 
       <div class="contact-process__item">
-        <span class="contact-process__number">01</span>
 
-        <h3>Anfrage senden</h3>
+        <span class="contact-process__number">
+          01
+        </span>
+
+        <h3>
+          Anfrage oder Termin
+        </h3>
 
         <p>
-          Du schreibst mir kurz, worum es geht.
+          Du schreibst mir kurz, worum es geht,
+          oder buchst direkt ein Kennenlerngespräch.
         </p>
+
       </div>
 
 
       <div class="contact-process__item">
-        <span class="contact-process__number">02</span>
 
-        <h3>Kennenlernen</h3>
+        <span class="contact-process__number">
+          02
+        </span>
+
+        <h3>
+          Kennenlernen
+        </h3>
 
         <p>
-          Wir besprechen Dein Anliegen und klären, welches Format dazu passt.
+          Wir besprechen Dein Anliegen und klären,
+          welches Format dazu passt.
         </p>
+
       </div>
 
 
       <div class="contact-process__item">
-        <span class="contact-process__number">03</span>
 
-        <h3>Zusammenarbeit planen</h3>
+        <span class="contact-process__number">
+          03
+        </span>
+
+        <h3>
+          Nächste Schritte planen
+        </h3>
 
         <p>
-          Du erhältst ein konkretes Angebot und wir stimmen die nächsten Schritte ab.
+          Je nach Anliegen erhältst Du ein Angebot
+          oder wir vereinbaren direkt den nächsten Termin.
         </p>
+
       </div>
 
     </div>
 
   </div>
 </section>
-

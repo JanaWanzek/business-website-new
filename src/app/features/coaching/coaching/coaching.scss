@@ -198,13 +198,13 @@
 }
 
 /* =========================
-   AVGS + BERATUNG
+   AVGS + Coaching
    ========================= */
 
 .coaching-dual {
   width: 100%;
   background: #F9F1E6;
-  padding: 70px 24px 80px;
+  padding: 70px 24px 40px;
 }
 
 .coaching-dual__grid {
@@ -238,13 +238,22 @@
   color: #FA5039;
 }
 
-.coaching-dual p {
+.coaching-dual__column > p:not(.section-kicker):not(.coaching-dual__note) {
   margin: 0 0 20px;
-
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 17px;
   line-height: 1.65;
+  color: #1A1A1A;
+}
 
+.coaching-dual .section-kicker {
+  margin: 0 0 28px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   color: #FA5039;
 }
 
@@ -275,8 +284,9 @@
 
 .coaching-dual__note {
   margin-top: 18px !important;
+  font-family: 'Helvetica Neue', Arial, sans-serif !important;;
   font-size: 14px !important;
-  color: #FA5039 !important;
+  color: #1A1A1A !important;
   opacity: 1;
 }
 
@@ -287,7 +297,7 @@
 .coaching-details {
   width: 100%;
   background: #F9F1E6;
-  padding: 0 24px 90px;
+  padding: 95px 24px 100px;
   box-sizing: border-box;
 }
 
@@ -295,11 +305,12 @@
   content: '';
 
   display: block;
+  content: '';
   width: 100%;
   max-width: 1200px;
   height: 1px;
 
-  margin: 0 auto 70px;
+  margin: 0 auto 50px;
 
   background: #FA5039;
 }
@@ -341,15 +352,15 @@
 .coaching-details__investment {
   padding-right: 50px;
 
-  border-right: 1px solid rgba(250, 80, 57, 0.35);
+  border-right: 1px solid #ADB5A7;
 }
 
 .coaching-investment__item {
-  padding: 22px 0;
-
-  border-top: 1px solid rgba(173, 181, 167, 0.7);
+  min-height: 112px;
+  padding: 18px 0;
+  box-sizing: border-box;
+  border-top: 1px solid  #ADB5A7;
 }
-
 .coaching-investment__item:first-of-type {
   padding-top: 0;
   border-top: 0;
@@ -397,7 +408,7 @@
 .coaching-topic {
   padding: 14px 0;
 
-  border-top: 1px solid rgba(173, 181, 167, 0.7);
+  border-top: 1px solid #ADB5A7;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -684,28 +695,21 @@
 }
 
 /* =========================
-   KONTAKT-CTA
+   COACHING BOOKING CTA
    ========================= */
 
-.coaching-cta {
+.coaching-booking {
   width: 100%;
   background: #FA5039;
-  padding: 90px 24px 100px;
+  padding: 85px 24px 95px;
   box-sizing: border-box;
 }
 
-.coaching-cta__inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.coaching-cta__label {
+.coaching-booking__label {
   margin: 0 0 18px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -713,54 +717,95 @@
   color: #F9F1E6;
 }
 
-.coaching-cta h2 {
-  max-width: 950px;
-  margin: 0 0 24px;
+.coaching-booking h2 {
+  max-width: 850px;
+  margin: 0 0 28px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(30px, 4.5vw, 50px);
+  font-size: clamp(40px, 4vw, 58px);
   font-weight: 700;
   line-height: 1.05;
 
   color: #F9F1E6;
 }
 
-.coaching-cta__text {
+.coaching-booking__text {
   max-width: 760px;
   margin: 0 0 34px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
 
   color: #F9F1E6;
 }
 
-.coaching-cta__button {
-  display: inline-block;
-  padding: 15px 26px;
+.coaching-booking__action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
-  background: #E9A2B2;
-  border: 1px solid #E9A2B2;
-  border-radius: 2px;
+.coaching-booking__button {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  background: #F9F1E6;
+  border: 1px solid #F9F1E6;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
   font-weight: 500;
 
-  color: #F9F1E6;
+  color: #FA5039;
   text-decoration: none;
 
   transition:
     background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.coaching-cta__button:hover {
-  background: #70C7EC;
-  border-color: #70C7EC;
+.coaching-booking__button:hover {
+  background: #EFADB7;
+  border-color: #EFADB7;
+
+  color: #F9F1E6;
+
+  transform: translateY(-2px);
+}
+
+.coaching-booking__note {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+
   color: #F9F1E6;
 }
 
 
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+
+  .coaching-booking {
+    padding: 65px 20px 75px;
+  }
+
+  .coaching-booking__action {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .coaching-booking__button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

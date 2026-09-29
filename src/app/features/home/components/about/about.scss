@@ -149,23 +149,65 @@
 @media (max-width: 850px) {
 
   .home-about {
-    padding: 55px 20px 65px;
+    width: 100%;
+    padding: 45px 20px 55px;
+    box-sizing: border-box;
+  }
+
+  .home-about .page-inner {
+    width: 100%;
+    max-width: 100%;
   }
 
   .home-about__grid {
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 34px;
   }
 
+  /* BILD */
+
   .home-about__visual {
+    width: 100%;
     justify-content: center;
   }
 
-  .home-about__image-placeholder {
-    max-width: 390px;
+  .home-about__photo {
+    width: 100%;
+    height: 360px;
+    min-height: 0;
+
+    object-fit: cover;
+    object-position: center 30%;
+
+    aspect-ratio: auto;
+
+    border-radius: 0 55px 0 55px;
+  }
+
+  /* TEXT */
+
+  .home-about__label {
+    margin-bottom: 14px;
+  }
+
+  .home-about h2 {
+    margin-bottom: 22px;
+
+    font-size: clamp(30px, 8.5vw, 36px);
+    line-height: 1.05;
+
+    overflow-wrap: anywhere;
   }
 
   .home-about__text {
-    font-size: 17px;
+    max-width: 100%;
+    margin-bottom: 26px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .home-about__button {
+    width: auto;
   }
 }

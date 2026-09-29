@@ -175,8 +175,8 @@
 }
 
 .contact-form__button:hover {
-  background: #70C7EC;
-  border: 1px solid #70C7EC;
+  background: #EFADB7;
+  border: 1px solid #EFADB7;
   color: #F9F1E6;
 }
 .contact-field input::placeholder,
@@ -196,17 +196,13 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .contact-info__block {
-  padding: 30px;
-
+  padding: 32px;
   background: #ADB5A7;
-}
-
-.contact-info__block--secondary {
-  background: #ADB5A7;
+  box-sizing: border-box;
 }
 
 .contact-info__label {
@@ -214,7 +210,8 @@
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 3px;
   text-transform: uppercase;
 
   color: #FA5039;
@@ -222,10 +219,11 @@
 
 .contact-info h3 {
   margin: 0 0 18px;
-  color: #FA5039;
 
   font-family: 'Forma DJR', sans-serif;
   font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
 
   color: #F9F1E6;
 }
@@ -255,20 +253,89 @@
 
 
 /* =========================
+   CALENDLY-BLOCK
+   ========================= */
+
+.contact-info__block--booking {
+  background: #E9A2B2;
+  padding: 34px 32px 36px;
+}
+
+.contact-info__block--booking h3 {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.contact-info__booking-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 22px;
+
+  background: #FA5039;
+  border: 1px solid #FA5039;
+
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #F9F1E6 !important;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-info__booking-button:hover {
+  background: transparent;
+  color: #FA5039 !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.contact-info__booking-note {
+  margin-top: 12px !important;
+
+  font-size: 14px !important;
+  color: #F9F1E6 !important;
+}
+
+
+/* =========================
+   FORMULAR-HINWEIS
+   ========================= */
+
+.contact-form__response-note {
+  margin: -8px 0 0;
+
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #1A1A1A;
+}
+
+
+/* =========================
    ABLAUF
    ========================= */
 
 .contact-process {
   width: 100%;
-  background:  #FA5039;
+  background: #FA5039;
   padding: 70px 24px 80px;
+  box-sizing: border-box;
 }
+
+
 
 .contact-process__label {
   margin: 0 0 16px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
+  font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
 
@@ -279,7 +346,8 @@
   margin: 0 0 45px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(38px, 4vw, 54px);
+  font-size: clamp(36px, 3.5vw, 48px);
+  font-weight: 700;
   line-height: 1.05;
 
   color: #F9F1E6;
@@ -292,6 +360,7 @@
 
 .contact-process__item {
   padding: 10px 32px;
+  box-sizing: border-box;
 }
 
 .contact-process__item:first-child {
@@ -303,15 +372,16 @@
 }
 
 .contact-process__item + .contact-process__item {
-  border-left: 1px solid #EFADB7
+  border-left: 1px solid rgba(249, 241, 230, 0.75);
 }
 
 .contact-process__number {
   display: block;
   margin-bottom: 22px;
 
-  font-family: 'Forma DJR', sans-serif;
-  font-size: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 
   color: #F9F1E6;
 }
@@ -321,6 +391,7 @@
 
   font-family: 'Forma DJR', sans-serif;
   font-size: 26px;
+  font-weight: 700;
   line-height: 1.15;
 
   color: #F9F1E6;
@@ -334,65 +405,4 @@
   line-height: 1.55;
 
   color: #F9F1E6;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 850px) {
-
-  .page-inner {
-    max-width: none;
-  }
-
-  .contact-hero {
-    padding: 55px 20px 65px;
-  }
-
-  .contact-hero h1 {
-    font-size: clamp(44px, 12vw, 60px);
-  }
-
-  .contact-hero__intro {
-    font-size: 17px;
-  }
-
-  .contact-main {
-    padding: 40px 20px 60px;
-  }
-
-  .contact-main__grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .contact-form__row {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-process {
-    padding: 55px 20px 65px;
-  }
-
-  .contact-process__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-process__item {
-    padding: 24px 0;
-  }
-
-  .contact-process__item:first-child {
-    padding-top: 0;
-  }
-
-  .contact-process__item:last-child {
-    padding-bottom: 0;
-  }
-
-  .contact-process__item + .contact-process__item {
-    border-left: none;
-    border-top: 1px solid rgba(26, 26, 26, 0.25);
-  }
 }

@@ -5,7 +5,7 @@
 .demokratie-hero {
   width: 100%;
   background: #F9F1E6;
-  padding: 70px 24px 100px;
+  padding: 50px 24px 35px;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@
   gap: 80px;
   align-items: center;
 
-    padding-bottom: 55px;
+    padding-bottom: 40px;
   border-bottom: 1px solid #70C7EC;
 }
 
@@ -28,7 +28,7 @@
 
 .demokratie-hero__back {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
@@ -266,8 +266,7 @@
 .demokratie-benefits {
   width: 100%;
   background: #F9F1E6;
-
-  padding: 60px 24px 100px;
+  padding: 35px 24px 65px;
   box-sizing: border-box;
 }
 
@@ -661,7 +660,7 @@
 .demokratie-rahmen {
   width: 100%;
   background: #F9F1E6;
-  padding: 80px 24px;
+  padding: 60px 24px;
   box-sizing: border-box;
 }
 
@@ -780,7 +779,7 @@
 
 .demokratie-targets {
   width: 100%;
-  padding: 80px 24px;
+  padding: 55px 24px;
   box-sizing: border-box;
   background: #F9F1E6;
 }
@@ -798,8 +797,8 @@
 .demokratie-targets .demokratie-target-card {
   width: 100%;
   min-width: 0;
-  min-height: 560px;
-  padding: 48px;
+  min-height: 480px;
+  padding: 42px;
 
   display: flex;
   flex-direction: column;
@@ -1001,7 +1000,7 @@
   margin: 0;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 18x;
+  font-size: 18px;
   line-height: 1.45;
 
   color: #F9F1E6;
@@ -1125,7 +1124,7 @@
 
 .demokratie-faq {
   width: 100%;
-  padding: 75px 24px;
+  padding: 60px 24px 50px;
   box-sizing: border-box;
   padding-bottom: 60px;
 
@@ -1271,7 +1270,7 @@
 .more-workshops {
   width: 100%;
   background: #F9F1E6;
-  padding: 60px 24px 90px;
+  padding: 45px 24px 65px;
   box-sizing: border-box;
 }
 
@@ -1451,21 +1450,404 @@
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
+/* =========================================
+   DEMOKRATIEFITNESS – MOBILE FINAL
+   ========================================= */
 
 @media (max-width: 750px) {
 
+  /* =========================
+     ALLGEMEIN
+     ========================= */
+
+  .demokratie-hero,
+  .demokratie-benefits,
+  .demokratie-muskeln,
+  .demokratie-rahmen,
+  .demokratie-targets,
+  .demokratie-preise,
+  .demokratie-faq,
   .more-workshops {
-    padding: 60px 20px 70px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .demokratie-hero__inner,
+  .demokratie-benefits__inner,
+  .demokratie-muskeln__inner,
+  .demokratie-rahmen__inner,
+  .demokratie-targets__inner,
+  .demokratie-preise__inner,
+  .demokratie-faq__inner,
+  .more-workshops .page-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  .demokratie-hero {
+    padding: 45px 20px 40px;
+  }
+
+  .demokratie-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+
+    padding-bottom: 35px;
+  }
+
+  .demokratie-hero__back {
+    margin-bottom: 32px;
+  }
+
+  .demokratie-hero__content,
+  .demokratie-hero__brand {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .demokratie-hero h1 {
+    max-width: 100%;
+    margin-bottom: 26px;
+
+    font-size: clamp(42px, 12vw, 54px);
+    line-height: 1.02;
+  }
+
+  .demokratie-hero__intro {
+    max-width: 100%;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .demokratie-hero__brand {
+    padding-left: 0;
+    padding-top: 32px;
+
+    border-left: none;
+    border-top: 1px solid #70C7EC;
+  }
+
+  .demokratie-hero__logo {
+    max-width: 210px;
+    margin-bottom: 28px;
+  }
+
+  .demokratie-hero__brand-text {
+    max-width: 100%;
+  }
+
+
+  /* =========================
+     WARUM / BENEFITS
+     ========================= */
+
+  .demokratie-benefits {
+    padding: 45px 20px 55px;
+  }
+
+  .demokratie-benefits__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .demokratie-benefits__content,
+  .demokratie-benefits__panel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+  .demokratie-benefits h2 {
+    max-width: 100%;
+
+    font-size: clamp(30px, 8.5vw, 38px);
+    line-height: 1.08;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .demokratie-benefits__content p {
+    max-width: 100%;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .demokratie-benefits__panel {
+    padding: 30px 26px;
+  }
+
+  .demokratie-benefit {
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+
+    padding: 22px 0;
+  }
+
+  .demokratie-benefit h3 {
+    font-size: 22px;
+  }
+
+  .demokratie-benefit p {
+    font-size: 15px;
+  }
+
+
+  /* =========================
+     10 DEMOKRATIE-MUSKELN
+     ========================= */
+
+  .demokratie-muskeln {
+    padding: 50px 20px;
+  }
+
+  .demokratie-muskeln__intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    margin-bottom: 32px;
+  }
+
+  .demokratie-muskeln h2 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .demokratie-muskeln__subtitle {
+    font-size: 23px;
+    line-height: 1.15;
+  }
+
+  .demokratie-muskeln__text p {
+    font-size: 16px;
+  }
+
+  .demokratie-muskeln__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demokratie-muskel,
+  .demokratie-muskel:nth-child(2n),
+  .demokratie-muskel:nth-child(5n) {
+    min-height: auto;
+
+    padding: 24px;
+
+    border-right: none;
+  }
+
+  .demokratie-muskel span {
+    margin-bottom: 12px;
+    font-size: 28px;
+  }
+
+
+  /* =========================
+     RAHMENBEDINGUNGEN
+     ========================= */
+
+  .demokratie-rahmen {
+    padding: 50px 20px;
+  }
+
+  .demokratie-rahmen__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .demokratie-rahmen h2 {
+    font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .demokratie-rahmen__intro p {
+    font-size: 16px;
+  }
+
+  .demokratie-rahmen__fact {
+    padding: 24px 0;
+  }
+
+  .demokratie-rahmen__fact h3 {
+    font-size: 24px;
+  }
+
+
+  /* =========================
+     BILDUNGSORGANISATIONEN / AZUBIS
+     ========================= */
+
+  .demokratie-targets {
+    padding: 45px 20px 55px;
+  }
+
+  .demokratie-targets__inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .demokratie-targets .demokratie-target-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: auto;
+
+    padding: 32px 26px;
+
+    box-sizing: border-box;
+  }
+
+  .demokratie-targets .demokratie-target-card__label {
+    margin-bottom: 20px;
+  }
+
+  .demokratie-targets .demokratie-target-card h2 {
+    max-width: 100%;
+    margin-bottom: 24px;
+
+    font-size: 29px;
+    line-height: 1.08;
+  }
+
+  .demokratie-targets .demokratie-target-card p:not(.demokratie-target-card__label) {
+    max-width: 100%;
+
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+
+  /* =========================
+     FORMATE & PREISE
+     ========================= */
+
+  .demokratie-preise {
+    padding: 50px 20px;
+  }
+
+  .demokratie-preise__header {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    margin-bottom: 30px;
+  }
+
+  .demokratie-preise .demokratie-preise__label {
+    grid-column: auto;
+    margin-bottom: 0;
+  }
+
+  .demokratie-preise__header h2 {
+    font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .demokratie-preis {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    padding: 24px 0;
+  }
+
+  .demokratie-preis__content {
+    min-width: 0;
+  }
+
+  .demokratie-preis__content h3 {
+    font-size: 23px;
+  }
+
+  .demokratie-preis__content > p:last-child {
+    max-width: 100%;
+
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .demokratie-preis__meta {
+    font-size: 17px;
+  }
+
+  .demokratie-preis__price {
+    align-items: flex-start;
+  }
+
+  .demokratie-preise__note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .demokratie-preise__note p {
+    font-size: 16px;
+  }
+
+
+  /* =========================
+     FAQ
+     ========================= */
+
+  .demokratie-faq {
+    padding: 50px 20px;
+  }
+
+  .demokratie-faq__inner {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .demokratie-faq__intro h2 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .demokratie-faq__intro > p:last-child {
+    max-width: 100%;
+  }
+
+  .demokratie-faq__item summary {
+    gap: 20px;
+    padding: 18px 0;
+
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .demokratie-faq__answer {
+    max-width: 100%;
+    padding: 0 30px 18px 0;
+  }
+
+
+  /* =========================
+     WEITERE WORKSHOPS
+     ========================= */
+
+  .more-workshops {
+    padding: 45px 20px 60px;
+  }
+
+  .more-workshops .page-inner {
+    padding-top: 38px;
   }
 
   .more-workshops h2 {
-    margin-bottom: 34px;
+    max-width: 100%;
+    margin-bottom: 32px;
+
+    font-size: clamp(34px, 9vw, 42px);
   }
 
   .more-workshops__grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 14px;
   }
@@ -1474,20 +1856,26 @@
   .more-workshop-card:nth-child(2),
   .more-workshop-card:nth-child(3),
   .more-workshop-card:nth-child(4),
-  .more-workshop-card:nth-child(5) {
-    grid-column: auto;
-  }
-
+  .more-workshop-card:nth-child(5),
   .more-workshop-card--wide {
-    grid-column: auto;
+    grid-column: 1;
   }
 
   .more-workshop-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
     min-height: 190px;
     padding: 24px;
+
+    box-sizing: border-box;
   }
 
   .more-workshop-card h3 {
+    max-width: 100%;
+
     font-size: 22px;
+    line-height: 1.2;
   }
 }

@@ -14,6 +14,9 @@ import { Gleichstellung } from './features/services/Gleichstellung/Gleichstellun
 import { Resilienz } from './features/services/Resilienz/Resilienz';
 import { Demokratiefitness } from './features/services/Demokratiefitness/Demokratiefitness';
 
+import { Impressum } from './features/Impressum/Impressum';
+import { Datenschutz } from './features/Datenschutz/Datenschutz';
+
 export const routes: Routes = [
 
   { path: 'home', component: Home },
@@ -25,6 +28,10 @@ export const routes: Routes = [
   { path: 'coaching', component: Coaching },
 
   { path: 'ueber-mich', component: AboutPage },
+
+  { path: 'Impressum', component: Impressum },
+
+  { path: 'Datenschutz', component: Datenschutz },
 
   { path: 'kontakt', component: Contact },
 

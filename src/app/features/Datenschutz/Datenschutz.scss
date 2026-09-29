@@ -1,15 +1,11 @@
 /* =========================
-   RECHTLICHE SEITEN
+   DATENSCHUTZ
    ========================= */
 
 .legal-page {
   width: 100%;
-  min-height: 100vh;
-
   background: #F9F1E6;
-
-  padding: 80px 24px 100px;
-
+  padding: 80px 24px;
   box-sizing: border-box;
 }
 
@@ -25,9 +21,8 @@
    ========================= */
 
 .legal-page__header {
-  max-width: 900px;
-
-  margin-bottom: 70px;
+  max-width: 950px;
+  margin-bottom: 60px;
 }
 
 .legal-page__label {
@@ -46,7 +41,7 @@
   margin: 0 0 24px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(52px, 6vw, 78px);
+  font-size: clamp(48px, 5vw, 68px);
   font-weight: 700;
   line-height: 1;
 
@@ -54,8 +49,7 @@
 }
 
 .legal-page__intro {
-  max-width: 720px;
-
+  max-width: 800px;
   margin: 0;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -73,14 +67,16 @@
 
 .legal-page__content {
   width: 100%;
-  max-width: 850px;
+  max-width: 950px;
 }
 
 
-/* EINZELNE ABSCHNITTE */
+/* =========================
+   ABSCHNITTE
+   ========================= */
 
 .legal-section {
-  padding: 34px 0;
+  padding: 32px 0;
 
   border-top: 1px solid rgba(250, 80, 57, 0.3);
 }
@@ -88,9 +84,6 @@
 .legal-section:last-child {
   border-bottom: 1px solid rgba(250, 80, 57, 0.3);
 }
-
-
-/* ZWISCHENÜBERSCHRIFT */
 
 .legal-section h2 {
   margin: 0 0 18px;
@@ -104,9 +97,12 @@
 }
 
 
-/* TEXT */
+/* =========================
+   TEXT
+   ========================= */
 
 .legal-section p {
+  max-width: 850px;
   margin: 0 0 14px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -122,7 +118,9 @@
 }
 
 
-/* LINKS */
+/* =========================
+   LINKS
+   ========================= */
 
 .legal-section a {
   color: #FA5039;
@@ -143,15 +141,15 @@
 @media (max-width: 850px) {
 
   .legal-page {
-    padding: 55px 20px 70px;
+    padding: 55px 20px 65px;
   }
 
   .legal-page__header {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .legal-page h1 {
-    font-size: clamp(46px, 13vw, 64px);
+    font-size: clamp(42px, 12vw, 58px);
   }
 
   .legal-page__intro {

@@ -15,12 +15,12 @@
 .workshop-hero {
   width: 100%;
   background: #F9F1E6;
-  padding: 65px 24px 25px;
+  padding: 50px 24px 20px;
 }
 
 .workshop-hero__back {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
@@ -46,15 +46,17 @@
 
 .workshop-hero h1 {
   width: 100%;
+  max-width: 1050px;
   margin: 0 0 26px;
 
   font-family: 'Forma DJR', sans-serif;
-  font-size: clamp(52px, 6vw, 82px);
+  font-size: clamp(48px, 5.2vw, 72px);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.02;
 
   color: #FA5039;
 }
+
 
 
 .workshop-hero__intro {
@@ -626,4 +628,16 @@
   .more-workshop-card h3 {
     font-size: 22px;
   }
+}
+.workshop-hero h1 {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 22px;
+
+  font-size: clamp(40px, 8vw, 45px);
+  line-height: 1.05;
+
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
 }
