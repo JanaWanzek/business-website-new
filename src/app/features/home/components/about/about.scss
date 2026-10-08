@@ -69,6 +69,10 @@
    TEXT
    ========================= */
 
+.home-about__content {
+  min-width: 0;
+}
+
 .home-about__label {
   margin: 0 0 18px;
 
@@ -88,6 +92,7 @@
   font-size: clamp(42px, 4.2vw, 58px);
   font-weight: 700;
   line-height: 1.02;
+  overflow-wrap: break-word;
 
   color: #F9F1E6;
 }

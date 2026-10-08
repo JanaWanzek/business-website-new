@@ -5,7 +5,7 @@ import { ServicesPreview } from '../components/services-preview/services-preview
 import { About } from '../components/about/about';
 import { Testimonials } from '../components/testimonials/testimonials';
 import { Gift } from '../../../../features/home/component/gift/gift';
-import { Faq } from '../components/FAQ/faq';
+import { Faq } from '../components/faq/faq';
 
 @Component({
   selector: 'app-home',

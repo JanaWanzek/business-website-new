@@ -47,6 +47,10 @@
   gap: 55px;
 }
 
+.about-hero__content {
+  min-width: 0;
+}
+
 .about-hero__title {
   margin: 0 0 34px;
 
@@ -54,6 +58,7 @@
   font-size: clamp(50px, 45vw, 72px);
   font-weight: 700;
   line-height: 1.03;
+  overflow-wrap: break-word;
 
   color: #F9F1E6;
 }
