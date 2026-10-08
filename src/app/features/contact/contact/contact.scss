@@ -179,6 +179,40 @@
   border: 1px solid #EFADB7;
   color: #F9F1E6;
 }
+
+.contact-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-form__error {
+  margin: 0 0 20px;
+
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+
+  color: #FA5039;
+}
+
+.contact-form__success h3 {
+  margin: 0 0 14px;
+
+  font-family: 'Forma DJR', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+
+  color: #FA5039;
+}
+
+.contact-form__success p {
+  margin: 0;
+
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #1A1A1A;
+}
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
   color: #1A1A1A;

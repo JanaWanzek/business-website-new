@@ -41,8 +41,9 @@
         Schreib mir.
       </h2>
 
+      @if (!submitted) {
       <form class="contact-form"
-      (ngSubmit)="onSubmit()"
+      (ngSubmit)="onSubmit(contactForm)"
       #contactForm="ngForm"
 >
 
@@ -55,6 +56,7 @@
               type="text"
               id="name"
               name="name"
+              ngModel
               placeholder="Dein Name"
               required
             >
@@ -67,6 +69,7 @@
               type="text"
               id="organisation"
               name="organisation"
+              ngModel
               placeholder="Organisation"
             >
           </div>
@@ -81,6 +84,7 @@
             type="email"
             id="email"
             name="email"
+            ngModel
             placeholder="name@organisation.de"
             required
           >
@@ -90,7 +94,7 @@
         <div class="contact-field">
           <label for="topic">Worum geht es?</label>
 
-          <select id="topic" name="topic" required>
+          <select id="topic" name="topic" ngModel required>
             <option value="">Bitte auswählen</option>
             <option value="workshop">Standardisierter Workshop</option>
             <option value="individuell">Individuelles Format</option>
@@ -106,18 +110,34 @@
           <textarea
             id="message"
             name="message"
+            ngModel
             rows="7"
             placeholder="Worum geht es in Deiner Anfrage?"
             required
           ></textarea>
         </div>
 
+        @if (failed) {
+        <p class="contact-form__error">
+          Beim Senden ist leider etwas schiefgelaufen. Bitte versuche es
+          erneut oder schreib mir direkt per E-Mail.
+        </p>
+        }
 
-        <button type="submit" class="contact-form__button">
-          Anfrage senden
+        <button type="submit" class="contact-form__button" [disabled]="submitting">
+          {{ submitting ? 'Wird gesendet…' : 'Anfrage senden' }}
         </button>
 
       </form>
+      } @else {
+      <div class="contact-form__success">
+        <h3>Danke für Deine Nachricht!</h3>
+        <p>
+          Ich habe Deine Anfrage erhalten und melde mich so schnell wie
+          möglich bei Dir zurück.
+        </p>
+      </div>
+      }
 
     </div>
 
